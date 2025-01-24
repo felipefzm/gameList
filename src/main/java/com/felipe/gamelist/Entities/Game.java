@@ -17,7 +17,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @EqualsAndHashCode
-@Table(name = "tb_games")
+@Table(name = "TB_GAMES")
 @Entity
 public class Game {
 
@@ -32,6 +32,10 @@ public class Game {
     private String platforms;
     private Double score;
     private String imgUrl;
+
+    @Column(columnDefinition = "Text")
     private String shortDescription;
+    
+    @Column(columnDefinition = "Text")
     private String longDescription;
 }
