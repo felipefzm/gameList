@@ -1,6 +1,7 @@
 package com.felipe.gamelist.dto;
 
 import com.felipe.gamelist.Entities.Game;
+import com.felipe.gamelist.projections.GameMinProjection;
 
 import lombok.Getter;
 
@@ -18,7 +19,14 @@ public class GameMinDTO {
         year = gameDTO.getYear();
         imgUrl = gameDTO.getImgUrl();
         shortDescription = gameDTO.getShortDescription();
+    }
 
+    public GameMinDTO(GameMinProjection projectionDTO) {
+        id = projectionDTO.getId();
+        title = projectionDTO.getTitle();
+        year = projectionDTO.getYear();
+        imgUrl = projectionDTO.getImgUrl();
+        shortDescription = projectionDTO.getShortDescription();
     }
 
 }
